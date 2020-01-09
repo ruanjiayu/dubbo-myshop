@@ -1,0 +1,10 @@
+-- auto Generated on 2020-01-08
+-- DROP TABLE IF EXISTS myshop.tb_item_param_item;
+CREATE TABLE myshop.tb_item_param_item(
+	id BIGINT (15) NOT NULL AUTO_INCREMENT COMMENT 'id',
+	item_id BIGINT (15) NOT NULL DEFAULT -1 COMMENT '商品ID',
+	created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+	param_data VARCHAR (50) NOT NULL DEFAULT '' COMMENT '参数数据，格式为json格式',
+	PRIMARY KEY (id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT 'myshop.tb_item_param_item';

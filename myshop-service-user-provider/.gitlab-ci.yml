@@ -1,0 +1,7 @@
+stages:
+  - package
+
+package:
+  stage: package
+  script:
+    - $MAVEN_HOME/bin/mvn clean package
