@@ -14,13 +14,15 @@ server:
 # Services Versions
 services:
   versions:
+    redis:
+      v1: 1.0.0
     user:
       v1: 1.0.0
 
 # Dubbo Config properties
 dubbo:
   scan:
-    basePackages: com.fun.uncle.myshop.service.user.consumer.controller
+    basePackages: com.fun.uncle.myshop.service.user.consumer
   ## ApplicationConfig Bean
   application:
     id: myshop-service-user-consumer
@@ -29,6 +31,8 @@ dubbo:
   protocol:
     id: dubbo
     name: dubbo
+    port: 30881
+    status: server
     serialization: kryo
   ## RegistryConfig Bean
   registry:

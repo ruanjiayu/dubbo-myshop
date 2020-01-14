@@ -40,6 +40,11 @@
             <artifactId>myshop-service-user-api</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.fun.uncle</groupId>
+            <artifactId>myshop-service-redis-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

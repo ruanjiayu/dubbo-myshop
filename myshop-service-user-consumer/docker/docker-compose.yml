@@ -1,0 +1,14 @@
+version: "3"
+services:
+  myshop-service-user-consumer:
+    restart: always
+    image: 192.168.10.11:8082/dubbo-myshop/myshop-service-user-consumer:v1.0.0
+    container_name: myshop-service-user-consumer.0.0
+    ports:
+      - 8601:8601
+      - 8701:8701
+
+networks:
+  default:
+    external:
+      name: dubbo_myshop

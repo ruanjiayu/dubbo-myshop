@@ -12,6 +12,16 @@ spring:
       max-active: 20
       test-on-borrow: true
       driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+    sentinel:
+      master: mymaster
+      nodes: 192.168.10.32:26379, 192.168.10.32:26380, 192.168.10.32:26381
 server:
   port: 8501
 
@@ -19,6 +29,8 @@ server:
 mybatis:
   type-aliases-package: com.fun.uncle.myshop.commons.domain
   mapper-locations: classpath:mapper/*.xml
+  configuration:
+    cache-enabled: true # 开启mybatis的二级缓存
 
 # Services Versions
 services:

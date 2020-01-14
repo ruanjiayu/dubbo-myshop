@@ -37,6 +37,7 @@
         <kyro.version>0.42</kyro.version>
         <jackson.version>2.9.6</jackson.version>
         <mysql.version>8.0.12</mysql.version>
+        <fastdfs.version>1.27-SNAPSHOT</fastdfs.version>
     </properties>
 
     <dependencyManagement>
@@ -92,6 +93,11 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.csource</groupId>
+                <artifactId>fastdfs-client-java</artifactId>
+                <version>${fastdfs.version}</version>
             </dependency>
             <!-- Commons End -->
         </dependencies>
@@ -241,7 +247,7 @@
 
     <repositories>
         <repository>
-            <id>nexus</id>
+            <id>nexus-snapshots</id>
             <name>Nexus Repository</name>
             <url>http://192.168.10.11:8081/repository/maven-public/</url>
             <snapshots>
