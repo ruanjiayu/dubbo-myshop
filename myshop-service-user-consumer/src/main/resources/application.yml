@@ -14,8 +14,6 @@ server:
 # Services Versions
 services:
   versions:
-    redis:
-      v1: 1.0.0
     user:
       v1: 1.0.0
 
